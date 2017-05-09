@@ -1,6 +1,6 @@
 
 .map-container {
-  width: 670px;
+  width: 900px;
   max-width: 100%;
   height: 500px;
   padding: 5px, 5px, 5px 5px;
@@ -12,4 +12,15 @@
 
 .green {
 	color: green;
+}
+
+.focusLoc :hover {
+    text-decoration: underline;
+}
+
+#droneFrame {
+width: 100%!important;
+height: 100%!important;
+
+
 }

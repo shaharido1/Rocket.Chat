@@ -1,19 +1,25 @@
 <template name="chatops_droneflight">
 	<div class="control">
-		<div> <b>Drone 1:</b>  mission <b>A3</b>   waypoint <b>7</b>   <span class="red">fuel 30%</span>  </div>
-		<div> <b>Drone 2:</b>  mission <b>A7</b>   waypoint <b>2</b>   <span class="green">fuel 100%</span> </div>
+		<a href={{mampim_url}}>mapmip</a>
 	</div>
 
 	<div class="content">
-	    <div class="map-container">
-		{{> googleMap name="flightMap" options=flightMapOptions }}
-		</div>
+		<iframe id="mipmapFrame" src={{mampim_url}} style="width:100%; height:90%"></iframe>
+		<!--{{#if dronevid}}
+		<iframe id="mipmapFrame" src= style="width:100%; height:20%"></iframe>
+		{{/if}}-->
 
-		<div class="droneFlight">
-			<button class='button'><span> {{_ "Return to base"}}</span></button>
-			<button class='button'><span> {{_ "Cancel"}}</span></button>
+		<div style="width:100%; height:10%">
+			<!--<button class='dronevid button'><span>show drone video</span></button>-->
+			<button class='setIp button'><span>set IP loc</span></button>
+			<button class='refreshUsers button'><span>refresh u loc</span></button>
+			<button class='refreshMessage button'><span>refresh msg loc</span></button>
+			<!--<button class='getLiveUpdates button'><span>get live updates</span></button>-->
+			<button class='refreshMap button'><span>refresh all</span></button>
 		</div>
 
 	</div>
 
 </template>
+
+<!--sandbox="allow-same-origin allow-scripts" -->

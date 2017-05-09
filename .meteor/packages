@@ -77,7 +77,7 @@ rocketchat:irc
 rocketchat:katex
 rocketchat:ldap
 rocketchat:lib
-rocketchat:livechat
+#rocketchat:livechat
 rocketchat:logger
 rocketchat:login-token
 rocketchat:mailer
@@ -135,7 +135,7 @@ rocketchat:message-snippet
 rocketchat:google-natural-language
 rocketchat:drupal
 rocketchat:monitoring
-#rocketchat:chatops
+rocketchat:chatops
 
 konecty:change-case
 konecty:delayed-task

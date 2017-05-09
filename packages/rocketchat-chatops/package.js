@@ -7,27 +7,28 @@ Package.describe({
 
 Package.onUse(function(api) {
 	api.use([
+		'coffeescript',
 		'ecmascript',
 		'rocketchat:lib',
-		'dburles:google-maps@1.1.5'
+		'dburles:google-maps@1.1.5',
+		'underscore'
 	]);
-
 	api.use('templating', 'client');
-
 	api.addFiles([
-		'client/startup.js',
-		'client/tabBar.js',
+		'client/mapmipStartup.js',
+		'client/tabBar.coffee',
 		'client/views/chatops.html',
-		'client/views/chatops.js',
-		'client/views/codemirror.html',
-		'client/views/codemirror.js',
 		'client/views/droneflight.html',
 		'client/views/droneflight.js',
-		'client/views/dynamicUI.html',
-		'client/views/stylesheets/chatops.css'
+		'client/views/stylesheets/chatops.css',
+		'client/model/locations.js',
+		'client/views/linkLoc.js',
+		'client/views/videodrone.html',
+		'client/views/videodrone.js',
 	], 'client');
-
 	api.addFiles([
-		'server/settings.js'
+		'server/settings.js',
+		'server/model/locations.js',
+		'server/publications/locations.js'
 	], 'server');
 });
